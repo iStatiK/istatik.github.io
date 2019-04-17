@@ -1,1 +1,0 @@
-# istatik.github.io
