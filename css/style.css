@@ -142,8 +142,8 @@ ul#navigation ul li {
     border: none;}
 
 ul#navigation ul li a {
-    background:white;
-    color:black;
+  background:rgba(209, 209, 209,.);
+  color:rgb(0,255,12);
     text-decoration:none;
     display:inline-block;
     border: none;
