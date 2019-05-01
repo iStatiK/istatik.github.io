@@ -50,7 +50,7 @@ body{font-family: 'Open Sans',sans-serif;background: #383d49;}
     margin:5px;}
 
 .tile:hover{
-    box-shadow: 0px 0px 5px 1px #FFF;}
+    box-shadow: 0px 0px 5px 2px #FFF;}
 
 .icon a img{
     width:30px;
@@ -60,7 +60,7 @@ body{font-family: 'Open Sans',sans-serif;background: #383d49;}
 /* Main Navigation */
 #nav {
     position:relative;
-    width:46%;
+    width:910px;
     height: 35px;
     margin:0 auto;
     padding:10px;}
