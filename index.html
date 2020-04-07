@@ -1,239 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<div class="topnav">
-  <div class="search-container">
-   <form action="https://duckduckgo.com" method="get">
-     <input type="text" placeholder="Search..." name="q" autofocus>
-   </form>
+<div class="row1">
+<!--Search and Shortcuts-->
+  <div class="column1">
+    <div class="search">
+      <form action="https://duckduckgo.com" method="get">
+        <input type="text" placeholder="Search..." name="q" autofocus>
+      </form>
+    </div>
+<!--Shortcuts-->
+    <div class='Panel' id='Icons'>
+      <div class='tile icon'><a class="text-color" href='https://mail.protonmail.com/login'><img src='Icons/protonmail.png' alt=""/></a></div>
+      <div class='tile icon'><a class="text-color" href='https://mail.google.com/'><img src='Icons/gmail.svg' alt=""/></a></div>
+      <div class='tile icon'><a class="text-color" href='https://outlook.live.com/'><img src='Icons/outlook.svg' alt=""/></a></div>
+      <div class='tile icon'><a class="text-color" href='https://linkedin.com/'><img src='Icons/linkedin.svg' alt=""/></a></div>
+      <div class='tile icon'><a class="text-color" href='https://raindrop.io/'><img src='Icons/raindrop.jpg' alt=""/></a></div>
+      <div class='tile icon'><a class="text-color" href='https://feedly.com/i/my'><img src='Icons/feedly.png' alt=""/></a></div>
+      <div class='tile icon'><a class="text-color" href='https://kentuckysportsradio.com/'><img src='Icons/ksr.jpg' alt=""></a></div>
+      <div class='tile icon'><a class="text-color" href='https://theathletic.com/'><img src='Icons/theathletic.png' alt=""></a></div>
+      <div class='tile icon'><a class="text-color" href='https://www.fanduel.com/'><img src='Icons/FanDuel.png' alt=""></a></div>
+      <div class='tile icon'><a class="text-color" href='https://www.espn.com/fantasy/'><img src='Icons/espn.png' alt=""></a></div>
+    </div>
   </div>
-  <div class='Panel' id='Icons'>
-    <div class='tile icon'><a href='https://mail.protonmail.com/login'><img src='Icons/protonmail.png' alt=""/></a></div>
-    <div class='tile icon'><a href='https://mail.google.com/'><img src='Icons/gmail.svg' alt=""/></a></div>
-    <div class='tile icon'><a href='https://outlook.live.com/'><img src='Icons/outlook.svg' alt=""/></a></div>
-    <div class='tile icon'><a href='https://linkedin.com/'><img src='Icons/linkedin.svg' alt=""/></a></div>
-    <div class='tile icon'><a href='https://raindrop.io/'><img src='Icons/raindrop.jpg' alt=""/></a></div>
-    <div class='tile icon'><a href='https://feedly.com/i/my'><img src='Icons/feedly.png' alt=""/></a></div>
-    <div class='tile icon'><a href='http://kentuckysportsradio.com/'><img src='Icons/ksr.jpg' alt=""></a></div>
+<!--End search and shortcuts-->
   </div>
+<!--End Search container-->
+
+<!--Start Bookmarks-->
+  <div class="row2">
+    <div id="links">
+    <div class="box bg-color border-color">
+      <h3>Home</h3>
+        <a class="text-color" href="https://docs.google.com/spreadsheets/d/1SUpeSeHpoyuujwJQ1zT2UFMwychA5nYSimLRKRcpsxc/edit#gid=835449236">Wedding Sheet</a>
+        <a class="text-color" href="https://my.noip.com/">NoIP</a>
+        <a class="text-color" href="https://192.168.1.70">ESXi1</a>
+        <a class="text-color" href="https://192.168.1.80/">ESXi2</a>
+        <a class="text-color" href="https://192.168.1.71:10000/">PlexWebmin</a>
+        <a class="text-color" href="https://192.168.1.50:10000/">DockerWebmin</a>
+        <a class="text-color" href="https://192.168.1.72:10000/">NCWebmin</a>
+        <a class="text-color" href="https://liverscloud.ddns.net/">NCExternal</a>
+        <a class="text-color" href="http://192.168.1.74:5000/">NAS</a>
+        <a class="text-color" href="https://192.168.1.73:8443/manage/site/default/dashboard">UniFi</a>
+        <a class="text-color" href="https://speak-easy.club/">SpeakEasyClub</a>
+        <a class="text-color" href="http://cigargeeks.com/humidor/default.asp">CigarGeeks</a>
+        <a class="text-color" href="http://volumio.local">Volumio</a>
+        <h3>School</h3>
+        <a class="text-color" href="https://outlook.com/topper.wku.edu">WKU EMail</a>
+        <a class="text-color" href="https://wku.blackboard.com/">WKU BB</a>
+        <a class="text-color" href="https://www.wku.edu/it/accounts/manage/">WKU Accounts</a>
+        <a class="text-color" href="https://acsapps.wku.edu/pls/prod/twbkwbis.P_WKULogin">TopNet</a>
+      </div>
+
+    <div class="box bg-color border-color">
+      <h3>Sundry</h3>
+      <a class="text-color" href="https://csoonline.com/">CSO</a>
+      <a class="text-color" href="https://famous-smoke.com/cigaradvisor">Cigar Advisor</a>
+      <a class="text-color" href="https://finewoodworking.com/">Fine Woodworking</a>
+      <a class="text-color" href="https://www.forbes.com/money/#5c504f4c19aa">Forbes Money</a>
+      <a class="text-color" href="https://www.virtuallyghetto.com/">Virtually Ghetto</a>
+      <a class="text-color" href="https://classicreload.com/">Classic Reload</a>
+      <a class="text-color" href="http://flappybird.io/">Flappy Bird</a>
+      <a class="text-color" href="https://mobygames.com/browse/games">Moby</a>
+      <a class="text-color" href="http://hobbithouseinc.com/personal/woodpics">Wood ID</a>
+      <a class="text-color" href="https://woodcraft.com/">Woodcraft</a>
+      <a class="text-color" href="http://lumberjocks.com/">LumberJocks</a>
+      <a class="text-color" href="https://www.thecybermentor.com/zero-to-hero-pentesting">0toHero</a>
+    </div>
+
+    <div class="box bg-color border-color">
+      <h3>Subreddits</h3>
+          <a class="text-color" href="https://www.reddit.com/r/vmware+sysadmin+homelab+docker+cisco+linuxadmin+networking+pfsense+tor+powershell">Dev</a>
+          <a class="text-color" href="https://www.reddit.com/r/HowToHack+Intelligence+IntelligenceNews+NSALeaks+blackhat+blueteamsec+cybersecurity+hacking+netsec+privacy+privacytoolsIO+security/">InfoSec</a>
+          <a class="text-color" href="https://www.reddit.com/r/CentOS+Ubuntu+archlinux+debian+gnome+kde+redhat/">Linux</a>
+          <a class="text-color" href="https://www.reddit.com/r/Economics+business+finance+investing+personalfinance/">Financial</a>
+          <a class="text-color" href="https://www.reddit.com/r/Barca+DerbyCounty+LouisvilleCityFC+borussiadortmund+chelseafc+soccer+ussoccer/">Sports</a>
+          <a class="text-color" href="https://www.reddit.com/r/diy+woodworking">DIY</a>
+          <a class="text-color" href="https://www.reddit.com/r/Damnthatsinteresting+EngineeringPorn+interestingasfuck+mechanical_gifs+specializedtools/">Engineering</a>
+          <a class="text-color" href="https://www.reddit.com/r/Android+Windows10+raspberry_pi+technology/">Tech</a>
+          <a class="text-color" href="https://www.reddit.com/r/FirefoxCSS+startpages+unixporn/">Looks</a>
+      
+    </div>
+
+    <div class="box bg-color border-color">
+      <h3>Financial</h3>
+        <a class="text-color" href="#">Banks</a>              
+          <a class="text-color" href="https://secure07b.chase.com/web/auth/dashboard#/dashboard/index/index">Chase</a>
+          <a class="text-color" href="https://cubsky.secure.fundsxpress.com/DigitalBanking/fx?iid=CUBSKY">CUB</a>
+          <a class="text-color" href="https://ccuky.org/">CCU</a>
+          <a class="text-color" href="https://ally.com">Ally</a>
+          <a class="text-color" href="https://accountaccess.edwardjones.com/ca-logon/logon.action">Edward Jones</a>
+         <h3>Other</h3>            
+          <a class="text-color" href="https://omnihoa.com/caliberportal">HOA</a>
+          <a class="text-color" href="https://www.go365.com/">Go365</a>
+          <a class="text-color" href="https://myapps.paychex.com/landing_remote/html">Paychex</a>
+    </div>
+
+    <div class="box bg-color border-color">
+      <h3>Bills & Insurance</h3>         
+        <a class="text-color" href="https://republicservices.com/account/login">Republic Svcs.</a>
+        <a class="text-color" href="https://hpfc.customercarenet.com/ccn/hpfc/mymortgage.html#HOME-C">Mortgage</a>
+        <a class="text-color" href="https://my.lge-ku.com/cs/logon.sap">LG&E</a>
+        <a class="text-color" href="https://www.atmosenergy.com/accountcenter/">Atmos</a>
+        <a class="text-color" href="https://spectrum.net/login/?ReferringPartner=TWC">Spectrum</a>
+        <a class="text-color" href="https://myadt.com/dashboard">ADT</a>
+        <a class="text-color" href="https://www2.invoicecloud.com/portal/(S(draey4fribsmnejyaiminjt1))/2/CustomerLogin.aspx?BillerGUID=41feb25f-0994-46e0-9f00-db385c284b4c">Water</a>
+        <a class="text-color" href="https://khris.ky.gov/irj/portal">KHRIS</a>
+        <a class="text-color" href="https://statefarm.com/">State Farm</a>
+        <a class="text-color" href="https://www.anthem.com/login/">Anthem</a>
+        <a class="text-color" href="https://service.trustage.com">TruStage</a>
+    </div>
+
+    <div class="box bg-color border-color"><h3>
+      <span class="tilde-color">Training</span></h3>  
+      <a class="text-color" href="http://opensecuritytraining.info/Training.html">OpenSec</a>
+      <a class="text-color" href="http://kalitutorials.net/">Kali Tuts</a>
+      <a class="text-color" href="https://kalilinuxtutorials.com/">Kali Tuts 2</a>
+      <a class="text-color" href="https://www.cybrary.it/skills-catalog/">Cybrary</a>
+      <a class="text-color" href="https://www.peerlyst.com/posts/the-how-to-use-kali-linux-wiki-peerlyst?utm_campaign=invitation-to-chime-in-on-a-post-by-system&utm_medium=email&utm_source=Knowtify">Kali How-To</a>
+      <a class="text-color" href="http://hackersgrid.com/">HackersGrid</a>
+      <a class="text-color" href="https://reddit.com/r/netsec/wiki/start">NetSec WiKi</a>
+      <a class="text-color" href="https://github.com/isislab/Hack-Night">Hack-Night</a>
+      <a class="text-color" href="https://labs.hol.vmware.com/HOL/catalogs/catalog/1212">VMWare</a>
+      <a class="text-color" href="https://www.hackthebox.eu/home">HTB</a>
+      <a class="text-color" href="http://www.underthewire.tech/century/century.htm">UTW.Tech</a>
+      <a class="text-color" href="http://overthewire.org/wargames/natas/">OTW.org</a>
+      <a class="text-color" href="https://github.com/Sudoblark/Powershell_Intro_Training">PS Training</a>      
+    </div>
+
+    <div class="box bg-color border-color">
+      <h3>Dirs</h3>
+      <a class="text-color" href="http://filechef.com/">FileChef</a>
+      <a class="text-color" href="https://lumpysoft.com/">Google Index Search</a>
+      <a class="text-color" href="http://gen.lib.rus.ec/">Genesis</a>
+      <a class="text-color" href="http://filediva.com/">FD</a>
+      <h3>Music</h3>
+      <a class="text-color" href="http://takemetal.org/">TakeMetal</a>
+      <a class="text-color" href="https://wasntborntofollow10.blogspot.com/">Index</a>
+      <a class="text-color" href="http://darkport.org/">Metal Music Blog</a>
+      <a class="text-color" href="http://get-albums.ru/">Getalbums.ru</a>
+      <a class="text-color" href="http://ripdolla.net/gh.html">Dolla</a>
+      <a class="text-color" href="https://wearesofuckingcore.blogspot.com/">SoFuckingCore</a>
+      <a class="text-color" href="http://www.metalstorm.net/home/">Metal Storm</a>
+      <a class="text-color" href="http://www.elrocknomuere.com/blog/">Metal</a>
+      <a class="text-color" href="https://discographydorock.blogspot.com/">Discography do Rock</a>
+      <a class="text-color" href="https://metalmercenario2.blogspot.com/">METALMERCENARIO</a>
+      <a class="text-color" href="http://newalbumreleases.net/">New Album Releases</a>
+    </div>
+
+    <div class="box bg-color border-color">
+    <h3>Others</h3>
+      <a class="text-color" href="http://ebook3000.biz/">ebook3000</a>
+      <a class="text-color" href="https://drive.google.com/drive/folders/1VxjINYMDvvUSRKA_k2aJqq6JzmRQCI1s">ROMS</a>
+      <a class="text-color" href="https://the-eye.eu/public/rom/">The-Eye ROMS</a>
+      <a class="text-color" href="http://ebook777.com/">Ebook777</a>
+      <a class="text-color" href="https://gutenberg.org/">Project Gutenberg</a>
+      <a class="text-color" href="https://archive.org/details/audio">Internet Archive</a>
+      <a class="text-color" href="https://tubitv.com/home">Tubi TV</a>
+      <a class="text-color" href="http://simpsonsworld.com/">Everything Simpsons</a>
+      <a class="text-color" href="https://psarips.com/">PSArips</a>
+      <a class="text-color" href="https://snahp.it/">Snahp.it</a>
+      <a class="text-color" href="https://forum.snahp.it/">Snahp.it - Forums</a>
+      <a class="text-color" href="https://warez-bb.org/index.php">WBB</a>
+    </div>
+
+    <div class="box bg-color border-color">
+      <h3>Torrents</h3>
+      <a class="text-color" href="https://1337x.to/">1337x.to</a>
+      <a class="text-color" href="https://torrentdownloads.me/">Torrent Downloads</a>
+      <a class="text-color" href="https://rarbg.to/torrents.php">RARBG</a>
+      <a class="text-color" href="http://aiosearch.com/">AIO Search</a>
+      <a class="text-color" href="http://glodls.to/">GloDLS.to</a>
+      <a class="text-color" href="https://solidtorrents.net/">Solid Torrents</a>
+      <a class="text-color" href="https://thepiratebay.org/">TPB</a>
+      <a class="text-color" href="https://snowfl.com/">snowfl</a>
+      <a class="text-color" href="http://toorgle.com/">Torrent Search Engine</a>
+      <a class="text-color" href="https://yts.ag/">YTS</a>
+<!--End Bookmarks-->
+    </div>
+  </div>
+  </div>
+<!--Weather-->
+      <a class="weatherwidget-io" href="https://forecast7.com/en/38d26n85d23/40065/?unit=us"
+      data-font="Roboto" data-icons="Climacons" 
+      data-textcolor="#ffffff"></a>
+      <script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+        if(!d.getElementById(id)){js=d.createElement(s);
+        js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
+        fjs.parentNode.insertBefore(js,fjs);
+        }}(document,'script','weatherwidget-io-js');
+      </script>
+    </div>
+<!--End Weather-->
 </div>
-
-<nav id="nav">
-    <ul id="navigation">
-      <li><a href="#">Home</a>
-        <ul>
-          <li><a href="https://docs.google.com/spreadsheets/d/1SUpeSeHpoyuujwJQ1zT2UFMwychA5nYSimLRKRcpsxc/edit#gid=835449236">Wedding Sheet</a></li>
-          <li><a href="https://my.noip.com/">NoIP</a></li>
-          <li><a href="https://192.168.1.70">ESXi1</a></li>
-          <li><a href="https://192.168.1.80/">ESXi2</a></li>
-          <li><a href="https://192.168.1.71:32400/web/index.html">Plex-Internal</a></li>
-          <li><a href="https://192.168.1.71:10000/">Plex Webmin</a></li>
-          <li><a href="https://app.plex.tv/web/app">Plex-App</a></li>
-          <li><a href="https://192.168.1.73:10000/">Docker01 Webmin</a></li>
-          <li><a href="https://192.168.1.72:10000/">NextCloud Webmin</a></li>
-          <li><a href="https://liverscloud.ddns.net/">NextCloud-External</a></li>
-          <li><a href="http://192.168.1.74:5000/">NAS</a></li>
-          <li><a href="https://192.168.1.73:8443/manage/site/default/dashboard">UniFi</a></li>
-          <li><a href="https://speak-easy.club/">SpeakEasyClub</a></li>
-          <li><a href="http://cigargeeks.com/humidor/default.asp">CigarGeeks</a></li>
-          <li><a href="http://volumio.local">Volumio</a></li>
-      </ul></li>
-
-      <li><a href="#">Sundry</a>
-        <ul>
-          <li><a href="https://csoonline.com/">CSO</a></li>
-          <li><a href="https://famous-smoke.com/cigaradvisor">Cigar Advisor</a></li>
-          <li><a href="https://finewoodworking.com/">Fine Woodworking</a></li>
-          <li><a href="https://www.forbes.com/money/#5c504f4c19aa">Forbes Money</a></li>
-          <li><a href="https://www.virtuallyghetto.com/">Virtually Ghetto</a></li>
-          <li><a href="https://classicreload.com/">Classic Reload</a></li>
-          <li><a href="http://flappybird.io/">Flappy Bird</a></li>
-          <li><a href="https://mobygames.com/browse/games">Moby</a></li>
-          <li><a href="http://hobbithouseinc.com/personal/woodpics">Wood ID</a></li>
-          <li><a href="https://woodcraft.com/">Woodcraft</a></li>
-          <li><a href="http://lumberjocks.com/">LumberJocks</a></li>
-          <li><a href="https://www.thecybermentor.com/zero-to-hero-pentesting">0toHero</a></li>
-      </ul></li>
-
-      <li><a href="#">Subreddits</a>
-        <ul>
-          <li><a href="https://www.reddit.com/r/vmware+sysadmin+homelab+docker+cisco+linuxadmin+networking+pfsense+tor+powershell">Dev</a></li>
-          <li><a href="https://www.reddit.com/r/HowToHack+Intelligence+IntelligenceNews+NSALeaks+blackhat+blueteamsec+cybersecurity+hacking+netsec+privacy+privacytoolsIO+security/">InfoSec</a></li>
-          <li><a href="https://www.reddit.com/r/CentOS+Ubuntu+archlinux+debian+gnome+kde+redhat/">Linux</a></li>
-          <li><a href="https://www.reddit.com/r/Economics+business+finance+investing+personalfinance/">Financial</a></li>
-          <li><a href="https://www.reddit.com/r/Barca+DerbyCounty+LouisvilleCityFC+borussiadortmund+chelseafc+soccer+ussoccer/">Sports</a></li>
-          <li><a href="https://www.reddit.com/r/diy+woodworking">DIY</a></li>
-          <li><a href="https://www.reddit.com/r/Damnthatsinteresting+EngineeringPorn+interestingasfuck+mechanical_gifs+specializedtools/">Engineering</a></li>
-          <li><a href="https://www.reddit.com/r/Android+Windows10+raspberry_pi+technology/">Tech</a></li>
-          <li><a href="https://www.reddit.com/r/FirefoxCSS+startpages+unixporn/">Looks</a></li>
-      </ul></li>
-
-      <li><a href="#">Financial</a>
-        <ul>
-          <li><a href="#">Banks</a>
-              <ul>
-              <li><a href="https://secure07b.chase.com/web/auth/dashboard#/dashboard/index/index">Chase</a></li>
-              <li><a href="https://cubsky.secure.fundsxpress.com/DigitalBanking/fx?iid=CUBSKY">CUB</a></li>
-              <li><a href="https://ccuky.org/">CCU</a></li>
-              <li><a href="https://ally.com">Ally</a></li>
-              <li><a href="https://accountaccess.edwardjones.com/ca-logon/logon.action">Edward Jones</a></li></ul></li>
-
-          <li><a href="#">Bills</a>
-            <ul>
-            <li><a href="https://republicservices.com/account/login">Republic Svcs.</a></li>
-            <li><a href="https://hpfc.customercarenet.com/ccn/hpfc/mymortgage.html#HOME-C">Mortgage</a></li>
-            <li><a href="https://my.lge-ku.com/cs/logon.sap">LG&E</a></li>
-            <li><a href="https://www.atmosenergy.com/accountcenter/">Atmos</a></li>
-            <li><a href="https://spectrum.net/login/?ReferringPartner=TWC">Spectrum</a></li>
-            <li><a href="https://myadt.com/dashboard">ADT</a></li>
-            <li><a href="https://www2.invoicecloud.com/portal/(S(draey4fribsmnejyaiminjt1))/2/CustomerLogin.aspx?BillerGUID=41feb25f-0994-46e0-9f00-db385c284b4c">Water</a></li></ul></li>
-
-          <li><a href="#">Insurance</a>
-            <ul>
-            <li><a href="https://khris.ky.gov/irj/portal">KHRIS</a></li>
-            <li><a href="https://statefarm.com/">State Farm</a></li>
-            <li><a href="https://www.anthem.com/login/">Anthem</a></li>
-            <li><a href="https://service.trustage.com">TruStage</a></li> </ul></li>
-
-          <li><a href="#">Other</a>
-            <ul>
-            <li><a href="https://omnihoa.com/caliberportal">HOA</a></li>
-            <li><a href="https://www.go365.com/">Go365</a></li>
-            <li><a href="https://myapps.paychex.com/landing_remote/html">Paychex</a></li></ul></li>
-      </ul></li>
-
-      <li><a href="#">Sports</a>
-        <ul>
-        <li><a href="#">The Athletic &#8594;</a>
-          <ul>
-            <li><a href="https://theathletic.com/team/kentucky-wildcats">Cats</a></li>
-            <li><a href="https://theathletic.com/team/north-carolina-tar-heels">Tarheels</a></li>
-            <li><a href="https://theathletic.com/team/sharks">Sharks</a></li>
-            <li><a href="https://theathletic.com/team/reds">Reds</a></li>
-            <li><a href="https://theathletic.com/team/indiana-hoosiers">Hoosiers</a></li>
-            <li><a href="https://theathletic.com/team/crew">Crew</a></li>
-            <li><a href="https://theathletic.com/cincinnati">Cincinnati</a></li>
-            <li><a href="https://theathletic.com/team/chelsea">Chelsea</a></li>
-            <li><a href="https://theathletic.com/team/bengals">Bengals</a></li>
-            <li><a href="https://theathletic.com/team/fc-barcelona">Barca</a></li>
-            <li><a href="https://theathletic.com/team/usmnt">USMNT</a></li>
-          </ul>
-          <li><a href="https://fanduel.com/">Fanduel</a></li>
-          <li><a href="http://espn.com/fantasy">ESPN Fantasy</a></li>
-          <li><a href="https://reddit.com/r/NHLStreams">NHLStreams</a></li>
-          <li><a href="https://reddit.com/r/ncaaBBallStreams">NCAABBallStreams</a></li>
-          <li><a href="https://reddit.com/r/nflstreams">NFLStreams</a></li>
-          <li><a href="https://www.soccerstreampass.com/">SoccerStreamPass</a></li>
-          <li><a href="https://www.ronaldo7.net/">R7</a></li>
-        </li>
-        </ul>
-      </li>
-
-      <li><a href="#">Training</a>
-        <ul>
-          <li><a href="http://opensecuritytraining.info/Training.html">OpenSec Training</a></li>
-          <li><a href="http://kalitutorials.net/">Kali Tuts</a></li>
-          <li><a href="https://kalilinuxtutorials.com/">Kali Tuts 2</a></li>
-          <li><a href="https://www.cybrary.it/skills-catalog/">Cybrary</a></li>
-          <li><a href="https://www.peerlyst.com/posts/the-how-to-use-kali-linux-wiki-peerlyst?utm_campaign=invitation-to-chime-in-on-a-post-by-system&utm_medium=email&utm_source=Knowtify">Kali How-To</a></li>
-          <li><a href="http://hackersgrid.com/">HackersGrid</a></li>
-          <li><a href="https://reddit.com/r/netsec/wiki/start">NetSec WiKi</a></li>
-          <li><a href="https://github.com/isislab/Hack-Night">Hack-Night</a></li>
-          <li><a href="https://labs.hol.vmware.com/HOL/catalogs/catalog/1212">VMWare</a></li>
-          <li><a href="https://www.hackthebox.eu/home">HTB</a></li>
-          <li><a href="http://www.underthewire.tech/century/century.htm">UTW.Tech</a></li>
-          <li><a href="http://overthewire.org/wargames/natas/">OTW.org</a></li>
-          <li><a href="https://github.com/Sudoblark/Powershell_Intro_Training">PS Training</a></li>
-      </ul></li>
-
-      <li><a href="#">School</a>
-        <ul>
-          <li><a href="https://outlook.com/topper.wku.edu">WKU EMail</a></li>
-          <li><a href="https://wku.blackboard.com/">WKU BB</a></li>
-          <li><a href="https://www.wku.edu/it/accounts/manage/">WKU Accounts</a></li>
-          <li><a href="https://acsapps.wku.edu/pls/prod/twbkwbis.P_WKULogin">TopNet</a></li>
-      </ul></li>
-
-      <li><a href="#">Media</a>
-        <ul>
-          <li><a href="#">Dirs &#8594;</a>
-              <ul>
-                <li><a href="http://filechef.com/">FileChef</a></li>
-                <li><a href="https://lumpysoft.com/">Google Index Search</a></li>
-                <li><a href="http://gen.lib.rus.ec/">Genesis</a></li>
-                <li><a href="http://filediva.com/">FD</a></li>
-              </ul>
-          </li>
-
-          <li><a href="#">Music  &#8594;</a>
-            <ul>
-              <li><a href="http://takemetal.org/">TakeMetal</a></li>
-              <li><a href="https://wasntborntofollow10.blogspot.com/">Index</a></li>
-              <li><a href="http://darkport.org/">Metal Music Blog</a></li>
-              <li><a href="http://get-albums.ru/">Getalbums.ru</a></li>
-              <li><a href="http://320k.me/">320k.me</a></li>
-              <li><a href="http://ripdolla.net/gh.html">Dolla</a></li>
-              <li><a href="https://wearesofuckingcore.blogspot.com/">SoFuckingCore</a></li>
-              <li><a href="http://www.metalstorm.net/home/">Metal Storm</a></li>
-              <li><a href="http://www.elrocknomuere.com/blog/">Metal</a></li>
-              <li><a href="https://discographydorock.blogspot.com/">Discography do Rock</a></li>
-              <li><a href="https://metalmercenario2.blogspot.com/">METALMERCENARIO</a></li>
-              <li><a href="http://newalbumreleases.net/">New Album Releases</a></li>
-            </ul></li>
-
-          <li><a href="#">Others &#8594;</a>
-            <ul>
-              <li><a href="http://ebook3000.biz/">ebook3000</a></li>
-              <li><a href="https://drive.google.com/drive/folders/1VxjINYMDvvUSRKA_k2aJqq6JzmRQCI1s">ROMS</a></li>
-              <li><a href="https://the-eye.eu/public/rom/">The-Eye ROMS</a></li>
-              <li><a href="http://ebook777.com/">Ebook777</a></li>
-              <li><a href="https://gutenberg.org/">Project Gutenberg</a></li>
-              <li><a href="https://archive.org/details/audio">Internet Archive</a></li>
-              <li><a href="https://tubitv.com/home">Tubi TV</a></li>
-              <li><a href="http://simpsonsworld.com/">Everything Simpsons</a></li>
-              <li><a href="https://psarips.com/">PSArips</a></li>
-              <li><a href="https://snahp.it/">Snahp.it</a></li>
-              <li><a href="https://forum.snahp.it/">Snahp.it - Forums</a></li>
-              <li><a href="https://warez-bb.org/index.php">WBB</a></li>
-            </ul></li>
-
-          <li><a href="#">Usenet &#8594;</a>
-            <ul>
-              <li><a href="https://www.reddit.com/r/usenet/">r/usenet</a></li>
-              <li><a href="https://drunkenslug.com/">DS</a></li>
-              <li><a href="https://reddit.com/r/usenet/wiki/indexers">Indexers</a></li>
-              <li><a href="https://nzbgeek.info/">NZBgeek</a></li>
-              <li><a href="https://usenet.farm/members.html#dashboard">Usenet.Farm</a></li>
-              <li><a href="http://6box.me/browse">6box</a></li>
-              <li><a href="http://frugalusenet.com/">Frugal Usenet</a></li>
-              <li><a href="https://nzbfinder.ws/">NZB Finder</a></li>
-              <li><a href="https://usenetserver.com/">UsenetServer</a></li>
-            </ul></li>
-
-          <li><a href="#">Torrents &#8594;</a>
-            <ul>
-              <li><a href="https://1337x.to/">1337x.to</a></li>
-              <li><a href="https://torrentdownloads.me/">Torrent Downloads</a></li>
-              <li><a href="https://rarbg.to/torrents.php">RARBG</a></li>
-              <li><a href="http://aiosearch.com/">AIO Search</a></li>
-              <li><a href="http://glodls.to/">GloDLS.to</a></li>
-              <li><a href="https://solidtorrents.net/">Solid Torrents</a></li>
-              <li><a href="https://thepiratebay.org/">TPB</a></li>
-              <li><a href="https://snowfl.com/">snowfl</a></li>
-              <li><a href="http://toorgle.com/">Torrent Search Engine</a></li>
-              <li><a href="https://yts.ag/">YTS</a></li>
-            </ul></li>
-
-        </ul> </li>
-
-    </ul>
-</nav>
 
 </body>
 </html>
