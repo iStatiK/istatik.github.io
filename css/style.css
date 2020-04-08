@@ -16,19 +16,17 @@
 .border-color { border: 5px solid #073642; }
 
 body{background-color: #073642;}
-h3{color: rgb(4, 151, 83); text-decoration: underline; font-size: 14px;}
+h3{color: rgb(4, 151, 83); text-decoration: underline; font-size: 14px; max-height: 5px;}
 h2{color: white; text-decoration: underline; font-size: 10px;}
 
 /*Search and weather columns*/
 .column1 {
   flex: 40%;
-  padding: 10px;
   height: 140px;
 }
 
 .column2 {
   flex: 60%;
-  padding: 10px;
   height: 140px; 
 }
 
@@ -85,7 +83,6 @@ h2{color: white; text-decoration: underline; font-size: 10px;}
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     margin: 4px;
-    padding: 8px;
     -webkit-box-shadow: 1px 1px 10px 0px #000;
        -moz-box-shadow: 1px 1px 10px 0px #000;
             box-shadow: 1px 1px 10px 0px #000;
