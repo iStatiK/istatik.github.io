@@ -22,7 +22,6 @@ h2{color: white; text-decoration: underline; font-size: 10px;}
 /*Search and weather columns*/
 .column1 {
   flex: 40%;
-  height: 140px;
 }
 
 .column2 {
@@ -42,11 +41,10 @@ h2{color: white; text-decoration: underline; font-size: 10px;}
 .search input[type=text] {
     background: none;
     color:white;
-    padding: 6px;
     padding-left: 0;
-    margin-top: 8px;
     border: none;    
-    font-size: 17px;}
+    width:545px;
+    font-size: 18px;}
 
 /*--Tiles and Panels--*/
 .Panel{
