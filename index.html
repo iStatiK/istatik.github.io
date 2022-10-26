@@ -1,41 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Startpage</title>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-    <style type="text/css">
-        @import url('https://fonts.googleapis.com/css?family=Satisfy');
-        @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
-        @import url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do');
-        @import url('https://fonts.googleapis.com/css?family=Roboto');
-        @import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
-
-        .hl-red {
-            color: #f78c6a;
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <style>
+        :root {
+        --font: "Roboto Mono";
+        --background: #000000;
+        --foreground: #bfc7c7;
+        --cursor: #bfc7c7;
+        --color0: #000000;
+/**        --color1: #05ebfc;
+        --color2: #ce0581;**/
+        --color1: #ffffff;
+        --color2: #ffffff;
+        --color3: #22758f;
+        --color4: hsl(0, 0%, 100%);
+        --branch: 1px solid var(--color4);
         }
 
-        .hl-orange {
-            color: #ffcb6b;
-        }
 
-        .hl-green {
-            color: #96dc8d;
-        }
-
-        .hl-blue {
-            color: #648494;
-        }
-
-        .hl-gray {
-            color: #fff;
+        html {
+        font-size: 25px;
         }
 
         body {
-            background-image: url("https://i.pinimg.com/736x/36/90/fd/3690fd2b167f5c700821f4bc2497a7c6.jpg");
-            background-size: 25% auto;
+            @media screen and (min-width: 768px) {html {zoom: 0.75 }};
+            background-color: black;
+            background-image: url("https://raw.githubusercontent.com/iStatiK/istatik.github.io/master/backgrounds/Halloween.jpg"); /* fallback */	
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%), url("https://raw.githubusercontent.com/iStatiK/istatik.github.io/master/backgrounds/Halloween.jpg");
+            background-size: auto;
             background-attachment: fixed;
             background-position: center bottom;
             background-repeat: no-repeat;
@@ -44,476 +40,271 @@
             padding: 0;
         }
 
-        #wrapper {
-            width: 100%;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
+        /* ~~~~~~~~~~~~~ tree general ~~~~~~~~~~~~ */
+
+        span {
+        color: var(--color1);
         }
 
-        #header {
-            text-align: center;
-            margin: auto;
-            padding: 50px 0px;
+        h1 {
+        display: inline;
+        font-family: var(--font);
+        font-size: 22px;
+        font-weight: normal;
+        color: var(--color2);
         }
 
-        #header span {
-            font-family: "Roboto";
-            font-weight: 200;
-            font-size: 55px;
-            color: #fff;
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus {
+        outline: none;
         }
+
+        /* ~~~~~~~~~~~~ tree container ~~~~~~~~~~~ */
+
+        .container {
+        position: absolute;
+        top: 500px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color:rgba(39,39,39,0.25);
+        border-radius: 2%;
+        }
+
+        /* ~~~~~~~~~~ tree category row ~~~~~~~~~~ */
+
+        .row {
+        display: flex;
+        }
+
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+        /* ~~~~~~~~~ tree category column ~~~~~~~~ */
+
+        .column {
+        flex: 50%;
+        padding: 15px;
+        }
+
+        /* ~~~~~~~~~~~~ tree bookmark category ~~~~~~~~~~~~ */
+
+        .category h1 > * {
+        white-space: nowrap;
+        display: inline;
+        justify-items: right;
+        display: inline;
+        flex-direction: row;
+        }
+
+        .category {
+        min-width: 12rem;
+        max-width: 20rem;
+        padding-bottom: 1vh;
+        }
+
+        li.bookmark > * {
+        display: inline-block;
+        }
+
+        .tree > ul {
+        margin: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        }
+
+        .tree > h1 {
+        white-space: nowrap;
+        }
+
+        ul {
+        list-style: none;
+        }
+
+        li {
+        position: relative;
+        }
+
+        li::before,
+        li::after {
+        content: "";
+        position: absolute;
+        left: -0.75rem;
+        }
+
+        li::before {
+        border-top: var(--branch);
+        top: 0.6rem;
+        width: 0.5rem;
+        }
+
+        li::after {
+        border-left: var(--branch);
+        height: 100%;
+        top: .275rem;
+        }
+
+        li:last-child::after {
+        height: .325rem;
+        }
+
+        a {
+        font-family: var(--font);
+        font-size: 16px;
+        color: var(--color2);
+        text-decoration: none;
+        outline: none;
+        }
+
+        a:hover {color: var(--color3);}
 
         .search-row {
-            width: 1010px;
-            height: 50px;
-            margin: 10px auto 20px auto;
-            padding: 0px 20px;
-            background-color: #272727;
-            border: solid 1px #272727;
-            opacity: 0.9;
-            border-radius: 10px;
+        width: 50vw;
+        height: 5vh;
+        margin: 1vh auto 1vh auto;
+        background-color: rgba(39,39,39,0.25);
+        border: solid 1px rgba(39,39,39,0.25);
+        border-radius: 10px;
+        outline: none;
         }
 
         #search-field {
-            width: 1010px;
-            height: 50px;
-            padding: 0px 10px 0px 0px;
-            background-color: #272727;
-            border: solid 0px #272727;
-            font-family: "Cutive Mono";
-            font-size: 18px;
-            color: #fff;
-            text-emphasis: bold;
-            float: left;
-            outline: none;
+        width: 50vw;
+        height: 5vh;
+        background-color: inherit;
+        font-size: 18px;
+        color: #fff;
+        text-emphasis: bold;
+        float: left;
+        outline: none;
+        border: none;
         }
 
-        #search-field::-moz-placeholder {
-            color: #8c8c8b !important;
+        input::placeholder {
+            color: white;
+            font-size: 1em;
+            font-weight: bold;
         }
+        
+        ::-moz-placeholder {
+            opacity: 1 ;            
+            color: white;
+            font-size: 1em;
+            font-weight: bold;
+            text-align: center;}
 
-        .terminal-con {
-            margin: auto;
-            text-align: center;
-        }
-
-        .terminal-row {
-            width: 1010px;
-            height: 40px;
-            margin: auto;
-            padding: 0px 20px;
-            background-color: #272727;
-            border: solid 1px #272727;
-            opacity: 0.9;
-            text-align: left;
-        }
-
-        .i1 {
-            padding: 10px 0px 0px 20px !important;
-        }
-
-        .ext-top {
-            padding: 20px 20px 0px 20px !important;
-            border-radius: 10px 10px 0px 0px;
-        }
-
-        .ext-btm {
-            padding: 0px 20px 20px 20px !important;
-            border-radius: 0px 0px 10px 10px;
-        }
-
-        .terminal-label {
-            height: 20px;
-            padding: 10px 0px;
-            font-family: "Cutive Mono";
-            font-size: 18px;
-            color: #f2f2f2;
-            float: left;
-            text-align: left;
-        }
-
-        .ext {
-            width: 100% !important;
-            height: 10px !important;
-        }
-
-        .terminal-innerCon {
-            width: 80%;
-            height: 440px;
-            margin: auto;
-            padding: 0px 20px;
-            background-color: #272727;
-            border: solid 1px #272727;
-            opacity: 0.9;
-        }
-
-        .favCon {
-            width: 15%;
-            margin: 10px 2%;
-            padding: 0px;
-            border: solid 1px #648494;
-            float: left;
-        }
-
-        .favCon-header {
-            padding: 5px 0px;
-            background: #D67E6B;
-            font-family: "Cutive Mono";
-            font-size: 18px;
-            color: #fff;
-        }
-
-        .favCon-body {
-            margin: 0px;
-            padding: 5px 0px 10px 0px;
-            text-align: center;
-        }
-
-        .favCon-body a {
-            border: none;
-        }
-
-        .favCon-el {
-            width: 95%;
-            height: 30px;
-            margin: 5px auto 0px auto;
-            padding: 0px 20px;
-            box-sizing: border-box;
-        }
-
-        .favCon-el:hover {
-            background: #648494;
-        }
-
-        .favCon-el-content {
-            width: 100%;
-            height: 100%;
-            padding: 5px 0px 0px 0px;
-            font-family: "Cutive Mono";
-            font-size: 18px;
-            color: #fff;
-            text-align: left;
-            float: left;
-        }
-
-    </style>
-
-<link type="text/css" rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+</style>
 </head>
 <body>
-    <div id="wrapper">
-        <div id="header"><span id="header-time"></span></div>
-        <div class="search-row">
-            <form action="https://duckduckgo.com" method="get">
-                <input id="search-field" type="text" placeholder="Search..." name="q" autofocus="autofocus">
-              </form>         
+
+    <div class="search-row">
+        <form action="https://duckduckgo.com" method="get">
+            <input id="search-field" type="text" placeholder="Search..." name="q" autofocus="autofocus">
+          </form>         
         </div>
-        <div class="terminal-con">
-            <div class="terminal-innerCon">
-                <div class="favCon">
-                    <div class="favCon-header">
-                        <span>Favorites</span>
-                    </div>
-                    <div class="favCon-body">
-                        <a href="https://mail.protonmail.com/login" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>Proton</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://mail.google.com" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>Gmail</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://outlook.live.com/" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>Outlook</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://outlook.com/topper.wku.edu" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>TopperMail</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://wku.blackboard.com/" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>Blackboard</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://www.fanduel.com/" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>Fanduel</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://www.espn.com/fantasy/" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>ESPN</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://www.finewoodworking.com/blogs" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>FineWoodworking</span>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
+    <div class="container">
+          <div class="row">
+            <div class="column" id="column-1">
+                <div class="tree">
+                    <h1 id="column-1-h1"></h1>
+                    <ul>
+                        <li id="category-1" class="category">
+                        <h1 id="category-1-header">
+                        <span class="category-title">Personal</span></h1>
+                        <ul>
+                            <li class="bookmark" id="bookmark-1"><a class="bookmark-link" href="https://mail.protonmail.com/login">Proton</a></li>
+                            <li class="bookmark" id="bookmark-2"><a class="bookmark-link" href="https://mail.google.com/">Gmail</a></li>
+                            <li class="bookmark" id="bookmark-3"><a class="bookmark-link" href="https://outlook.com/">Outlook</a></li>
+                            <li class="bookmark" id="bookmark-16"><a class="bookmark-link" href="https://www.fanduel.com/">Fanduel</a></li>
+                            <li class="bookmark" id="bookmark-17"><a class="bookmark-link" href="https://www.espn.com/fantasy/">ESPN</a></li></ul></li>
+                        
+                        <li id="category-2" class="category"><h1 id="category-2-header"><span class="category-title">Security News</span></h1>
+                        <ul>
+                            <li class="bookmark" id="bookmark-4"><a class="bookmark-link" href="https://www.zdnet.com/topic/security">ZDNet</a></li>
+                            <li class="bookmark" id="bookmark-5"><a class="bookmark-link" href="https://www.darkreading.com/latest/news">Darkreading</a></li>
+                            <li class="bookmark" id="bookmark-44"><a class="bookmark-link" href="https://cybernews.com/">CyberNews</a></li> 
+                            <li class="bookmark" id="bookmark-6"><a class="bookmark-link" href="https://thehackernews.com/">THN</a></li>
+                            <li class="bookmark" id="bookmark-7"><a class="bookmark-link" href="https://www.infosecurity-magazine.com/news/">InfoSec Mag</a></li>
+                            <li class="bookmark" id="bookmark-8"><a class="bookmark-link" href="https://www.vx-underground.org/">VX-UG</a></li>
+                            <li class="bookmark" id="bookmark-9"><a class="bookmark-link" href="https://ddosecrets.com/wiki/Distributed_Denial_of_Secrets">DDOSSecrets</a></li>
+                            <li class="bookmark" id="bookmark-10"><a class="bookmark-link" href="https://www.databreaches.net/">Databreaches.net</a></li>
+                            <li class="bookmark" id="bookmark-42"><a class="bookmark-link" href="https://www.bleepingcomputer.com/">BleepingComputer</a></li>
+                            <li class="bookmark" id="bookmark-43"><a class="bookmark-link" href="https://threatpost.com/">ThreatPost</a></li>                     
+                            </ul></li>
+                        
+                        <li id="category-3" class="category"><h1 id="category-3-header"><span class="category-title">Other</span></h1>
+                        <ul>
+                            <li class="bookmark" id="bookmark-11"><a class="bookmark-link" href="https://bluegrasstoday.com/">Bluegrass Today</a></li>
+                            <li class="bookmark" id="bookmark-12"><a class="bookmark-link" href="https://hackaday.com/">Hackaday</a></li>
+                            <li class="bookmark" id="bookmark-13"><a class="bookmark-link" href="https://www.space.com/">Space</a></li>
+                            <li class="bookmark" id="bookmark-14"><a class="bookmark-link" href="https://golfweek.usatoday.com/">Golfweek</a></li>
+                            <li class="bookmark" id="bookmark-15"><a class="bookmark-link" href="https://www.finewoodworking.com/blogs">FineWoodworking</a></li></ul></li>
                 </div>
-
-                <div class="favCon">
-                    <div class="favCon-header">
-                        <span>Dolla Dolla Bills, Y'all</span>
-                    </div>
-                    <a href="https://secure07b.chase.com/web/auth/dashboard#/dashboard/index/index" onfocus="if(this.blur)this.blur()">
-                        <div class="favCon-el">
-                            <div class="favCon-el-content">
-                                <span>Chase</span>
-                            </div>
-                        </div>
-                    </a>
+            </div>
                     
-                        <a href="https://www.ally.com/" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>Ally</span>
-                                </div>
-                            </div>
-                        </a>
-                    
-                        <a href="https://digitalbanking.ccuky.org/Login/UserName" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>CCU</span>
-                                </div>
-                            </div>
-                        </a> 
-               
-                        <a href="https://www.cubbank.com/" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>CUB</span>
-                                </div>
-                            </div>
-                        </a>
-
-                    <a href="https://accountaccess.edwardjones.com/ca-logon/logon.action" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>Edward Jones</span>
-                                </div>
-                            </div>
-                        </a>
-                                        
-                    <div class="favCon-body">
-                        <a href="https://my.hpfc.com/#" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>Mortgage</span>
-                                </div>
-                            </div>
-                        </a>
-
-                    <a href="https://secure.newportgroup.com" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>401K</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://my.lge-ku.com/cs/logon.sap" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>LG&E</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://service.trustage.com" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>TruStage</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://my.lge-ku.com/cs/logon.sap" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>LG&E</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+            <div class="column" id="column-5">
+                <div class="tree">
+                    <h1 id="column-1-h1"></h1>
+                    <ul>
+                        <li id="category-5" class="category">
+                        <h1 id="category-5-header">
+                        <span class="category-title">Security Training</span></h1>
+                        <ul>
+                            <li class="bookmark" id="bookmark-44"><a class="bookmark-link" href="https://tryhackme.com/">TryHackMe</a></li>
+                            <li class="bookmark" id="bookmark-45"><a class="bookmark-link" href="https://blueteamlabs.online/home">BTLO</a></li>
+                            <li class="bookmark" id="bookmark-34"><a class="bookmark-link" href="https://www.thecybermentor.com/zero-to-hero-pentesting">0ToHero</a></li>
+                            <li class="bookmark" id="bookmark-35"><a class="bookmark-link" href="https://opensecuritytraining.info/Training.html">OpenSec</a></li>
+                            <li class="bookmark" id="bookmark-36"><a class="bookmark-link" href="https://portswigger.net/web-security/dashboard">PortSwigger</a></li>
+                            <li class="bookmark" id="bookmark-36"><a class="bookmark-link" href="https://tdm.socprime.com/education/webinars">SOCPrime</a></li>
+                            <li class="bookmark" id="bookmark-47"><a class="bookmark-link" href="https://academy.picussecurity.com">PurpleAcademy</a></li></ul>                      
+                        <li id="category-6" class="category"><h1 id="category-6-header"><span class="category-title">Finances & Sundry</span></h1>
+                        <ul>
+                            <li class="bookmark" id="bookmark-18"><a class="bookmark-link" href="https://secure07b.chase.com/web/auth/dashboard#/dashboard/index/index">Chase</a></li>
+                            <li class="bookmark" id="bookmark-19"><a class="bookmark-link" href="https://liberty.financial/">Liberty Financial</a></li>
+                            <li class="bookmark" id="bookmark-19"><a class="bookmark-link" href="https://www.ally.com/">Ally</a></li>
+                            <li class="bookmark" id="bookmark-46"><a class="bookmark-link" href="https://www.usbank.com/index.html">U.S. Bank</a></li>
+                            <li class="bookmark" id="bookmark-19"><a class="bookmark-link" href="https://allydirect.com">Truck</a></li>
+                            <li class="bookmark" id="bookmark-22"><a class="bookmark-link" href="https://accountaccess.edwardjones.com/ca-logon/logon.action">Edward Jones</a></li>
+                            <li class="bookmark" id="bookmark-23"><a class="bookmark-link" href="https://loansphereservicingdigital.bkiconnect.com/homepointfinancial/#/dashboard">Mortgage</a></li>
+                            <li class="bookmark" id="bookmark-24"><a class="bookmark-link" href="https://secure.newportgroup.com">401K</a></li>
+                            <li class="bookmark" id="bookmark-25"><a class="bookmark-link" href="https://my.lge-ku.com/cs/logon.sap">LG&E</a></li>
+                            <li class="bookmark" id="bookmark-26"><a class="bookmark-link" href="http://cigargeeks.com/humidor/default.asp">CigarGeeks</a></li>
+                            <li class="bookmark" id="bookmark-27"><a class="bookmark-link" href="https://speak-easy.club/">SpeakEasy Club</a></li></ul></li>
                 </div>
-                
-                <div class="favCon">
-                    <div class="favCon-header">
-                        <span>Private</span>
-                    </div>
-                    <div class="favCon-body">
-                        <a href="https://myadt.com/dashboard" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>ADT</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://feedly.com/i/m" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>Feedly</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://app.raindrop.io/" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>Raindrop</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="http://cigargeeks.com/humidor/default.asp" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>CigarGeeks</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://speak-easy.club" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>SpeakEasyClub</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+            </div>
 
-                <div class="favCon">
-                    <div class="favCon-header">
-                        <span>Reddit</span>
-                    </div>
-                    <div class="favCon-body">
-                        <a href="https://www.reddit.com/r/vmware+sysadmin+homelab+docker+cisco+linuxadmin+networking+pfsense+tor+powershell+devops+kubernetes" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>DEV</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://www.reddit.com/r/HowToHack+Intelligence+IntelligenceNews+NSALeaks+blackhat+blueteamsec+redteamsec+cybersecurity+hacking+netsec+privacy+PrivacyGuides" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>InfoSec</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://www.reddit.com/r/Economics+business+finance+investing+personalfinance/" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>Finance</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://www.reddit.com/r/diy+woodworking" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>DIY</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://www.reddit.com/r/Windows10+apple+ios+ipad+iphone+raspberry_pi+technology" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>Tech</span>
-                                </div> 
-                            </div>
-                        </a>
-                        <a href="https://www.reddit.com/r/Barca+DerbyCounty+LouisvilleCityFC+borussiadortmund+chelseafc+soccer+ussoccer/" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>Sports</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+            <div class="column" id="column-6">
+                <div class="tree">
+                    <ul>
+                        <li id="category-7" class="category">
+                        <h1 id="category-7-header">
+                        <span class="category-title">Reddit</span></h1>
+                        <ul>
+                            <li class="bookmark" id="bookmark-28"><a class="bookmark-link" href="https://www.reddit.com/r/vmware+sysadmin+homelab+docker+cisco+linuxadmin+networking+pfsense+tor+powershell+devops+kubernetes">DEV</a></li>
+                            <li class="bookmark" id="bookmark-29"><a class="bookmark-link" href="https://www.reddit.com/r/HowToHack+blackhat+blueteamsec+redteamsec+cybersecurity+hacking+netsec+UIC+Malware">InfoSec</a></li>
+                            <li class="bookmark" id="bookmark-30"><a class="bookmark-link" href="https://www.reddit.com/r/Economics+business+finance+investing+personalfinance/">Finance</a></li>
+                            <li class="bookmark" id="bookmark-31"><a class="bookmark-link" href="https://www.reddit.com/r/diy+woodworking">DIY</a></li>
+                            <li class="bookmark" id="bookmark-32"><a class="bookmark-link" href="https://www.reddit.com/r/Windows10+apple+ios+ipad+iphone+raspberry_pi+technology">Tech</a></li>
+                            <li class="bookmark" id="bookmark-33"><a class="bookmark-link" href="https://www.reddit.com/r/Barca+DerbyCounty+LouisvilleCityFC+borussiadortmund+chelseafc+soccer+ussoccer/">Sports</a></li></ul></li>
 
-                <div class="favCon">
-                    <div class="favCon-header">
-                        <span>Training/Other</span>
-                    </div>
-                    <div class="favCon-body">
-                        <a href="https://www.thecybermentor.com/zero-to-hero-pentesting" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>0toHero</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://opensecuritytraining.info/Training.html" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>OpenSec</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://portswigger.net/web-security/dashboard" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>PortSwigger</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://rarbg.to/torrents.php" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>RarBG</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://1337x.to/" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>1337x</span>
-                                </div> 
-                            </div>
-                        </a>
-                        <a href="http://libgen.rs/" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>LibGen</span>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://b-ok.cc/" onfocus="if(this.blur)this.blur()">
-                            <div class="favCon-el">
-                                <div class="favCon-el-content">
-                                    <span>ZLib</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                    <li id="category-8" class="category">
+                        <h1 id="category-8-header">
+                        <span class="category-title">Training/Other</span></h1>
+                        <ul>
+                            <li class="bookmark" id="bookmark-37"><a class="bookmark-link" href="https://rarbg.to/torrents.php">RarBG</a></li>
+                            <li class="bookmark" id="bookmark-38"><a class="bookmark-link" href="https://1337x.to/">1337x</a></li>
+                            <li class="bookmark" id="bookmark-39"><a class="bookmark-link" href="https://solidtorrents.net/">Solid</a></li>
+                            <li class="bookmark" id="bookmark-40"><a class="bookmark-link" href="http://libgen.rs/">LibGen</a></li>
+                            <li class="bookmark" id="bookmark-41"><a class="bookmark-link" href="https://b-ok.cc/">ZLib</a></li>
+                            <li class="bookmark" id="bookmark-48"><a class="bookmark-link" href="https://nzbstars.com/">NZBStars</a></li>
+                        
+                        </ul></li>
                 </div>
-
             </div>
         </div>
-        <div></div>
-        <div></div>
-    </div>
 </body>
 </html>
